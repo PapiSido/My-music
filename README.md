@@ -1,5 +1,4 @@
-# My-music
-what it says
+# My music
 
 see [my page](http://francois.sidoroff.free.fr/Math&Music.html) for my first java attempts and my [SoundSynth](http://francois.sidoroff.free.fr/SoundSynth.html) software
 (Pour les francophones le fichier français SoundSynth.pdf est plus complet)
