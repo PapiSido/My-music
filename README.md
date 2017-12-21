@@ -10,5 +10,5 @@ But java and php probably are not the best language.
 
 The MOOC [Learn to Code Electronic Music Tools with Javascript](https://www.futurelearn.com/courses/electronic-music-tools/) gave me the impulse I needed to go back to this project
 
-So here we are today 
+The first project **"D_Keyboard"** aims at implementing a simple diatonic keyboeard, for now an easy variation on  Matthew's Keyboard controleld synth ( video 1.14 and [codecircle example](https://live.codecircle.com/d/uYk2SLcT77YJFL7Xu) ) but open for further extensions
 
