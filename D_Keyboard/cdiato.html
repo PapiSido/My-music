@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8"/>
+	<title>Clavier diatonique</title>
+	<link rel="stylesheet" media="screen" href="cdiato.css" type="text/css"/>
+    <script src="solfege.js"></script>
+    <script>
+    function key2deg(c){
+        if (c=="a"){
+            return -1;
+        }
+        if (c=="z"){
+            return 0;
+        }
+        if (c=="e"){
+            return 1;
+        }
+        if (c=="r"){
+            return 2;
+        }
+        if (c=="t"){
+            return 3;
+        }
+        if (c=="y"){
+            return 4;
+        }
+        if (c=="u"){
+            return 5;
+        }
+        if (c=="i"){
+            return 6;
+        }
+        if (c=="o"){
+            return 7;
+        }
+        if (c=="p"){
+            return 8;
+        }
+		 if (c==" "){
+            osc.stop();
+        } 
+        return 0;
+    } 
+    </script>
+</head>
+    
+<body>   
+<h1>Clavier diatonique</h1> 
+    <h2>paramètres</h2> 
+    <ul>
+        <li>tempérament: égal</li>
+        <li>mode : ionien</li>
+        <li>note de base:  C4</li>
+        <li>diapason : 440Hz</li>
+    </ul>
+    
+    
+    
+    
+<div id= "main" tabindex="1" onkeydown="setNote(event.key)">
+    <p><strong>Z:Tonique, Y:Quinte, O:octave</strong></p>
+    <p id = "controle"></p>
+</div>
+    
+<div id="boutons">
+	<input type="submit" name ="startBtn" id="startBtn" VALUE="Start" onclick="fonctionStart();" />
+	<input type="submit" name ="stopdBtn" id="stopBtn" VALUE="Stop" onclick="fonctionStop();" />
+</div>   
+    
+</body>
+
+<script>
+
+
+    var audio_context = window.AudioContext || window.webkitAudioContext;
+    var con = new audio_context();
+    //var osc = con.createOscillator();
+    
+    //osc.connect(con.destination);
+    //osc.frequency.value = rfreq0;
+    
+    //osc.start();
+    
+    
+    // this function is called when the user
+    // presses a key on the keboard
+    // it receives the key they pressed as 'key'
+    
+    function setNote(key){
+        osc.frequency.value = diato_freq(key2deg(key));
+    }
+	
+	function fonctionStop(){
+		osc.stop();
+	}
+	
+	function fonctionStart(){
+		osc = con.createOscillator();
+		osc.connect(con.destination);
+		osc.frequency.value = rfreq0;
+		osc.start();
+	}
+      
+        
+      
+    
+</script>
