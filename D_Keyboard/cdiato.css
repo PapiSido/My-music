@@ -1,0 +1,28 @@
+body {
+	font-family: Verdana, Arial, Sans;
+	font-size: 13px;
+	color: #444444;
+	background: #dddddd;
+}
+
+#titre{
+	font-size: 20px;
+	margin: 20px;
+}
+
+#main{
+	background:black; 
+	height: 200px; 
+	width: 300px;
+	color:orange;
+	font-size: 15px;
+	margin: 20px;
+	padding: 5px;
+	text-align:center;
+}
+
+#boutons{
+	margin-top:30px;
+	margin-left:50px;
+}
+

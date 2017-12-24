@@ -59,15 +59,15 @@
     
     
     
-<div id= "main" tabindex="1" onkeydown="setNote(event.key)">
+<div id= "main" onkeydown="setNote(event.key)">
     <p><strong>Z:Tonique, Y:Quinte, O:octave</strong></p>
     <p id = "controle"></p>
+	<div id="boutons">
+		<input type="submit" name ="startBtn" id="startBtn" VALUE="Start" onclick="fonctionStart();" />
+		<input type="submit" name ="stopdBtn" id="stopBtn" VALUE="Stop" onclick="fonctionStop();" />
+	</div>  
+	
 </div>
-    
-<div id="boutons">
-	<input type="submit" name ="startBtn" id="startBtn" VALUE="Start" onclick="fonctionStart();" />
-	<input type="submit" name ="stopdBtn" id="stopBtn" VALUE="Stop" onclick="fonctionStop();" />
-</div>   
     
 </body>
 
